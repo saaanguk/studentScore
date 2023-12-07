@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+blockquote{
+  padding: 1.5em 3em;
+  margin: 2em;
+  /*v Font formatting v*/
+  font-family: Georgia, serif;
+  font-size: 1em;
+  color: #666;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 6%;
+  margin-left: 40%;
+}
+
+.hline{
+  border-top: 4px solid #2C2559;
+  content: "";
+  z-index: 1;
+  text-align:center;
+  height:0;
+  width: 300px;
+}
+
+.hline.top::after, .hline.bottom::after{
+  /*pullquote color+formatting*/
+  font-family: arial;
+  font-size: 10em;
+  font-weight: bold;
+  text-shadow: -8px -8px 0 #fff, 8px -8px 0 #fff, -8px 8px 0 #fff, 8px 8px 0 #fff;
+  color: #D9A74A;
+  position:relative;
+}
+
+.hline.top::after{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  /*Positioning*/
+  top:-0.9em;
+}
+
+.hline.bottom::after{
+  content: "\201D"; /*Unicode for Right Double Quote*/  
+  /*Positioning*/
+  top:-0.24em;
+}
+
+  /*Quote headling - optional*/
+blockquote h1{
+  color:#2C2559;
+  font-size:1.6em;
+  text-transform:uppercase;
+  font-family: Georgia, serif;
+  text-align:left;
+  margin-bottom:0;
+  margin-left: 7%;
+}
+
+  /*Main quote copy*/
+blockquote label{
+  position:relative;
+  z-index:99;
+  padding:1em;
+  line-height: 1.4;
+  margin-left: 4%;
+}
+
+  /*Quote byline*/
+blockquote cite{
+  position:relative;
+  padding:1em;
+  display:block;
+  font-family: Georgia, serif;  
+}
+blockquote cite:after{
+  content:'';
+  width:0.75em;
+  border-bottom:1px solid #666;
+  position:absolute;
+  padding-bottom:0.5em;
+  left:0;
+}
